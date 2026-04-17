@@ -60,9 +60,9 @@ const App: React.FC = () => {
             window.history.pushState("", document.title, window.location.pathname + window.location.search);
         }
       } else {
-        e.preventDefault();
         const element = document.querySelector(href);
         if (element) {
+          e.preventDefault();
           setIsSellerAppOpen(false);
           setIsBuyerAppOpen(false);
           element.scrollIntoView({ behavior: 'smooth' });

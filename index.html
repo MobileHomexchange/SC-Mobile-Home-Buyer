@@ -1,29 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>scmobilehomebuyer.com | Expert Carolinas Manufactured Home Solutions</title>
+    <title>scmobilehomebuyer.com | South Carolina Mobile Home Buyers</title>
     <meta
       name="description"
-      content="scmobilehomebuyer.com - Specialized mobile home buyers in South Carolina and North Carolina. Get a guaranteed price for your manufactured home in 7 days."
+      content="We buy mobile homes in South Carolina for cash. Fast, fair, and hassle-free. Get your cash offer today!"
     />
-
-    <!-- SEO & Social Meta Tags -->
-    <meta property="og:title" content="scmobilehomebuyer.com | Fast & Fair Solutions" />
-    <meta
-      property="og:description"
-      content="Get a guaranteed cash offer for your mobile home in 7 days. Specialists in SC & NC title transfers."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?auto=format&fit=crop&w=1200&q=80"
-    />
-    <meta property="og:url" content="https://scmobilehomebuyer.com" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#1e3a8a" />
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
@@ -39,12 +25,9 @@
         font-family: "Inter", sans-serif;
         scroll-behavior: smooth;
       }
-      .text-shadow-lg {
-        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      }
-      :focus-visible {
-        outline: 2px solid #d97706;
-        outline-offset: 2px;
+      ::selection {
+        background: #f59e0b;
+        color: white;
       }
     </style>
 
@@ -59,20 +42,18 @@
     "react-dom/client": "https://esm.sh/react-dom@19.2.3/client",
     "react/jsx-runtime": "https://esm.sh/react@19.2.3/jsx-runtime",
     "react/jsx-dev-runtime": "https://esm.sh/react@19.2.3/jsx-dev-runtime",
-    "firebase/app": "https://esm.sh/firebase@10.8.0/app",
-    "firebase/auth": "https://esm.sh/firebase@10.8.0/auth",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "firebase/": "https://esm.sh/firebase@^12.8.0/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "firebase/": "https://esm.sh/firebase@^12.9.0/"
   }
 }
 </script>
 
-    <!-- App Entry Point -->
     <script type="module" src="./index.tsx"></script>
-  </head>
-
-  <body class="antialiased text-gray-900 overflow-x-hidden selection:bg-amber-100 selection:text-amber-900">
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="antialiased text-slate-900 bg-slate-50 overflow-x-hidden">
     <div id="root"></div>
-  </body>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>

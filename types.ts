@@ -17,7 +17,7 @@ export interface Testimonial {
 export interface ServiceFeature {
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ElementType;
 }
 
 export enum ChatSender {
@@ -36,44 +36,39 @@ export interface BlogPost {
   id: string;
   title: string;
   excerpt: string;
-  content: string;
   date: string;
   author: string;
-  imageUrl: string;
   category: string;
-}
-
-// Integration Types
-export interface DealDetails {
-  bedrooms: number;
-  bathrooms: number;
-  year: number;
-  size: string;
-  condition: string;
-  park: string;
-}
-
-export interface MediaItem {
-  type: 'image' | 'video';
-  url: string;
-  thumbnail?: string;
-  room: string;
-  alt?: string;
+  imageUrl: string;
+  content: string;
 }
 
 export interface Deal {
-  id: number | string;
+  id: number;
   title: string;
   location: string;
   price: string;
-  status: 'Sold' | 'Available';
+  status: string;
   description: string;
   tags: string[];
-  media: MediaItem[];
-  details: DealDetails;
+  media: { 
+    type: 'image' | 'video'; 
+    url: string; 
+    thumbnail?: string; 
+    alt?: string; 
+    room?: string 
+  }[];
+  details: { 
+    bedrooms: number; 
+    bathrooms: number; 
+    year: number; 
+    size: string; 
+    condition: string; 
+    park: string 
+  };
 }
 
-// Added missing interface for property valuation results
+// Added ValuationResult interface to resolve missing export in MHEvaluator.tsx
 export interface ValuationResult {
   low_range: number;
   high_range: number;
